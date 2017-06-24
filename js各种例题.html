@@ -1,0 +1,122 @@
+<html>
+<head>
+	<script type="text/javascript">
+
+		function factorial(num){            //1*2*3*~~~~~~~*n
+			if(num<=1){
+				return 1;
+			} else {
+				return num *arguments.callee(num-1);
+			}
+		}
+
+//		alert(factorial(4));
+
+
+
+		var string = new Array(1,3,5,4,2);    //冒泡排序法
+		for(var j = 0; j < 4; j++){
+			for(var i = 4 ; i > 0 ; i--){
+				if(string[i]>string[i-1]){
+					var t = string[i];
+					string[i] = string[i-1];
+					string[i-1] = t;
+				}
+				else{
+//					alert("no");
+				}
+			}
+//			alert("no");
+		}
+//		alert(string);
+
+
+
+		var arr = new Array(1,2,3,4,5,1,2,3,6);    
+	//	var arr2 = new Array();
+
+	/*	for (var i = 0; i < arr.length; i++) {	//数组去重1
+			var t = 0;
+			for (var j = i+1 ; j < arr.length; j++) {
+				if(arr[i] == arr[j]){
+					t = 1;
+					break;
+				}
+			//	arr2[i] = arr[i];
+			}
+			if(t == 0){
+				arr2[i] = arr[i];
+			}
+		}
+		alert(arr2);
+*/
+	/*	for (var i = 0; i < arr.length; i++) {     //数组去重2
+			var t = 0;
+			for (var j = i+1 ; j < arr.length; j++) {
+				if(arr[i] == arr[j]){
+					t = 1;
+					break;
+				}
+			}
+			if(t == 1){
+				for(var k = i ; k < arr.length ; k++){
+					arr[k] = arr[k+1];
+				}
+			}
+		} */
+
+//		alert(arr);
+
+		var arr3 = new Array(1,3,3,3,4,4,5);   //数组去重3
+		var k = arr3.length;
+		var i = 0;
+		while(i < k-1){
+		//for(i=0;i<k-1;i++){
+			if(arr3[i] == arr3[i+1]){
+				for(var j = i ; j<k ; j++){
+					arr3[j] = arr3[j+1];
+				}
+				k--;
+			}
+			else{
+				i++;
+			}
+		}
+
+//		alert(arr3);
+
+		var str = "sdfgsessssssssssssdssdfsa";  //计算字符串中出现次数最多的字符和它的次数1
+		var arr = [];
+		var max = 0;
+		var maxk;
+		for(var i = 0;i<str.length;i++){    
+			var k = str[i];
+		//	alert(arr[k]);					//第一次出现的字符不计数，之后的为计数
+			if(!arr[k]){
+				arr[k] = str.split(k).length-1;   //split(k)为字符串拆分成数组之后的k
+			//	alert(arr[k]);
+			}
+		//	alert(arr[k]);						//arr[k]为该字符k的个数
+		//	alert(k);							//k为该字符
+		}
+		//alert(arr);
+		for(var n in arr){       //for in 遍历arr
+			if(max <arr[n]){
+				max = arr[n];   //数量
+				maxk = n;       //字符
+			}
+		}
+//		console.log("出现最多的字符是："+maxk+"出现的次数为："+max);
+//		alert(max);alert(maxk);
+
+		
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
