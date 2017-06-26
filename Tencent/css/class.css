@@ -185,9 +185,9 @@
 
 }
 
-.date {
+.date1 {
+	margin-top:-25px; 
 	float:right;
-	margin-top:-25px;
 	font-size:12px;
 	color:#bababa
 }
@@ -196,9 +196,49 @@
 	position: absolute;
 	top: 850px;
 	left: 965px;
-	width: 400px;
+	width: 350px;
 	height: 195px;
-	background: black;
+}
+
+.news_list1 {
+	list-style: none;
+	margin-left: -40px;
+	font-size: 13px;
+}
+
+.news_list1 li {
+	margin-bottom: 8px;
+	color: #7b7b7b;
+}
+
+.news_list1 li a {
+	color: #7b7b7b;
+}
+
+.news_list2 {
+	display: none;
+}
+
+.news_list3 {
+	display: none;
+}
+
+.txt {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	display: inline-block;
+	width: 270px;
+}
+
+.tab_list {
+	text-align: right;
+}
+
+.date {
+	float:right;
+	font-size:12px;
+	color:#bababa
 }
 
 .back_menu {
@@ -297,11 +337,13 @@
 
 .vista_title {
 	display: none;
+	border: 1px solid #0080ff;
 	position: absolute;
-	left: 75px;
-	top: 2000px;
-	height: 300px;
+	left: 150px;
+	top: 860px;
+	height: auto;
 	width: 300px;
+	background-color: white;
 }
 
 .vista_title li {
@@ -320,4 +362,16 @@
 
 .vista_title li a {
 	font-size: 12px;
+}
+
+.weichat {
+	position: absolute;
+	top: 880px;
+	left: 375px;
+	width: 300px;
+	height: 350px;
+	background-color: white;
+	text-align: center;
+	border: 1px solid #0080ff;
+	display: none;
 }
