@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta  http-equiv="content-type" content="text/html;charset=utf-8"/>
+
+<head>
+<style type="text/css">
+	body {
+		text-align : center;
+}
+
+	#div1, #div2 {
+		float:left; 
+		width:400px; 
+		height:100px; 
+		margin:10px;
+		padding:10px;
+		border:1px solid #7b7b7b;
+}
+</style>
+
+<script type="text/javascript">
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)			//drag(event)，它规定了被拖动的数据。
+{
+ev.dataTransfer.setData("Text",ev.target.id);		//dataTransfer.setData() 方法设置被拖数据的数据类型和值：
+}
+
+
+//调用 preventDefault() 来避免浏览器对数据的默认处理（drop 事件的默认行为是以链接形式打开）
+//通过 dataTransfer.getData("Text") 方法获得被拖的数据。该方法将返回在 setData() 方法中设置为相同类型的任何数据。
+//被拖数据是被拖元素的 id ("drag1")
+//把被拖元素追加到放置元素（目标元素）中
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
+</head>
+
+<body>
+
+<audio controls="controls">
+  <source src="Pop Danthology 2012.wav" type="audio/mav">
+  <source src="Pop Danthology 2012.mp3" type="audio/mpeg">
+Your browser does not support the audio tag.
+</audio>
+<br/>
+<video width="320" height="240" controls="controls">
+  <source src="iCloudHD-3.ogg" type="video/ogg">
+  <source src="iCloudHD-3.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<br/>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+<img src="logo.jpg" draggable="true" ondragstart="drag(event)" id="drag1"/>
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+</body>
+
+<html>
