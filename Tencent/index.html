@@ -11,7 +11,7 @@
 <div>
 	<div>
 		<!-- 头部的蓝条-->
-		<div class = "menu">
+		<div id="menu" class="menu">
 			<div class = "head_logo"><a href="index.html"><img src="img/logo.jpg"></a></div>
 			<ul class = "menu_list">
 				<li ><a href="https://www.tencent.com/zh-cn/company.html"><i class="c_line"></i>公司信息</a></li>
@@ -26,13 +26,22 @@
 			</ul>
 		</div>
 
-		<div class="video">
-			<div class="text1" id="text1">
-				赋能你我 连接未来
-			</div>
+        <div class="image" id="image">
+            <div class="text1" id="text1">
+                赋能你我 连接未来
+            </div>
+            <img src="img/planet.jpg">
+            <div class="tab_video_list">
+                <a class="tab_item_current" href="javascript:;" onclick="show_video_1()"><i>1</i></a>
+                <a class="tab_item " href="javascript:;" onclick="show_video_2()"><i>2</i></a>
+            </div>
+        </div>
+
+		<div class="video" id="video">
             <div class="text2" id="text2">
                 青春无畏 冲动不止
             </div>
+            <video src="video/video1.mp4" loop autoplay preload></video>
             <div class="tab_video_list">
                 <a class="tab_item_current" href="javascript:;" onclick="show_video_1()"><i>1</i></a>
                 <a class="tab_item " href="javascript:;" onclick="show_video_2()"><i>2</i></a>
